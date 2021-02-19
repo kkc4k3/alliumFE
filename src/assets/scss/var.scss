@@ -2,5 +2,10 @@
 @use "./var/font.scss" as font;
 @use "./var/color.scss" as color;
 @use "./var/radius.scss" as radius;
+@use "./var/fa.scss" as fa;
 
 $transition: 0.3s;
+
+// メディアクエリ
+$pc: 'screen and (min-width:1025px)';
+$tab: 'screen and (min-width:600px)';

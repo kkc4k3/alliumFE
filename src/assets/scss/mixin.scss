@@ -2,3 +2,19 @@
   display: flex;
   align-items: center;
 }
+
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover {
+  transition: $transition;
+  &:hover {
+    @media #{$pc} {
+      @content;
+    }
+  }
+}
