@@ -1,0 +1,10 @@
+{
+  "allium": {
+    "--main-color": "#26A69A",
+    "--deep-color": "#00796B",
+    "--light-color": "#80CBC4",
+    "--bg-color": "#FAFAFA",
+    "--text-color": "#263238",
+    "--alt-color": "#FAFAFA"
+  }
+}

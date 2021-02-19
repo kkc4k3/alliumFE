@@ -1,3 +1,6 @@
+require('dotenv').config()
+const { PLEROMA_URL } = process.env
+
 export default {
   srcDir: './src',
   head: {
@@ -13,11 +16,11 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  css: [],
+  css: ['~/assets/css/destyle.css', '~/assets/scss/style.scss'],
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/dotenv'],
-  env: {},
+  env: { PLEROMA_URL },
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
@@ -34,7 +37,10 @@ export default {
     component: 'fa',
   },
   styleResources: {
-    scss: [],
+    scss: ['~/assets/scss/var.scss', '~/assets/scss/mixin.scss'],
   },
   build: {},
+  router: {
+    middleware: 'route',
+  },
 }
